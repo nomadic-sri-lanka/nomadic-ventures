@@ -60,7 +60,7 @@ export function LuxuryHero({ heroImage }: { heroImage?: string }) {
         {[
           { Icon: Facebook, link: "https://www.facebook.com/NomadicVenturesSriLanka/" },
           { Icon: Instagram, link: "https://www.instagram.com/nomadic_ventures_srilanka/" },
-          { Icon: Music2, link: "#" },
+          { Icon: Music2, link: "https://www.tiktok.com/@nomadic.ventures.s?lang=en" },
           { Icon: Linkedin, link: "#" },
         ].map(({ Icon, link }, i) => (
           <motion.a
