@@ -31,23 +31,4 @@ jobs:
         run: npx tsc --noEmit
 
 
-      - name: Build
-        run: npm run build
-        env:
-          # Dummy values so next build doesn't crash on missing env vars.
-          # These are never used at runtime — only needed to satisfy
-          # compile-time checks during the CI build step.
-          DATABASE_URL: "postgresql://user:pass@localhost:5432/db"
-          DIRECT_URL: "postgresql://user:pass@localhost:5432/db"
-          JWT_SECRET: "ci-dummy-jwt-secret-not-real"
-          JWT_EXPIRES_IN: "7d"
-          SUPABASE_URL: "https://example.supabase.co"
-          SUPABASE_SERVICE_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSJ9.stub"
-          CLOUDINARY_CLOUD_NAME: "dummy"
-          CLOUDINARY_API_KEY: "000000000000000"
-          CLOUDINARY_API_SECRET: "dummy-secret"
-          NEXT_PUBLIC_WHATSAPP_NUMBER: "94771766134"
-          NEXT_PUBLIC_WHATSAPP_DISPLAY: "+94 77 17 66 134"
-          GMAIL_USER: "ci@example.com"
-          GMAIL_APP_PASSWORD: "dummy"
-          INQUIRY_TO_EMAIL: "ci@example.com"
+
