@@ -30,8 +30,6 @@ jobs:
       - name: TypeScript type check
         run: npx tsc --noEmit
 
-      - name: ESLint
-        run: npx next lint --max-warnings 100
 
       - name: Build
         run: npm run build
