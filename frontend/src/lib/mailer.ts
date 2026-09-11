@@ -5,16 +5,31 @@ let transporter: ReturnType<typeof nodemailer.createTransport> | null = null;
 function getTransporter() {
   if (transporter) return transporter;
 
-  const user = process.env.GMAIL_USER;
-  const pass = process.env.GMAIL_APP_PASSWORD;
+  const user = process.env.SMTP_USER || process.env.GMAIL_USER;
+  const pass = process.env.SMTP_PASSWORD || process.env.GMAIL_APP_PASSWORD;
+  const host = process.env.SMTP_HOST;
+  const port = parseInt(process.env.SMTP_PORT || "465", 10);
+
   if (!user || !pass) {
-    throw new Error("GMAIL_USER / GMAIL_APP_PASSWORD environment variables are not set");
+    throw new Error("SMTP_USER / SMTP_PASSWORD environment variables are not set");
   }
 
-  transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: { user, pass },
-  });
+  // If a custom SMTP host is provided (e.g., mail.lankahost.lk), use it.
+  // Otherwise, default to the existing Gmail service configuration.
+  if (host) {
+    transporter = nodemailer.createTransport({
+      host,
+      port,
+      secure: port === 465, // true for 465, false for other ports (like 587)
+      auth: { user, pass },
+    });
+  } else {
+    transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: { user, pass },
+    });
+  }
+
   return transporter;
 }
 
@@ -106,7 +121,7 @@ export async function sendInquiryEmail(data: InquiryEmailData) {
   const transport = getTransporter();
 
   await transport.sendMail({
-    from: `"Nomadic Ventures Website" <${process.env.GMAIL_USER}>`,
+    from: `"Nomadic Ventures Website" <${process.env.SMTP_USER || process.env.GMAIL_USER}>`,
     to,
     replyTo: data.email,
     subject: `${SOURCE_LABEL[data.source]} — ${data.firstName} ${data.lastName}`,
