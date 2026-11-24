@@ -160,7 +160,7 @@ export function TransportService({ transportImage = "https://images.unsplash.com
                 }}
               >
                 <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#F4B942" }} />
-                NORMADIC FLEET · LIVE
+                NOMADIC FLEET · LIVE
               </div>
               <div
                 className="px-4 py-2 rounded-full border"

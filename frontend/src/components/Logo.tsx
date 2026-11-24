@@ -22,7 +22,7 @@ export function Logo({
     >
       <img
         src={logoSrc}
-        alt="Normadic Ventures"
+        alt="Nomadic Ventures"
         style={{
           width: size,
           height: size,
