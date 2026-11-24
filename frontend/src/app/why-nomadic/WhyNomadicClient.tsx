@@ -18,7 +18,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 
-// ─── Why Normadic pillars ──────────────────────────────────────────────────────
+// ─── Why Nomadic pillars ──────────────────────────────────────────────────────
 const WHY_PILLARS = [
   {
     Icon: SlidersHorizontal,
@@ -144,7 +144,7 @@ export function WhyNomadicClient({ whyNomadicImages }: { whyNomadicImages?: stri
           >
             <span>HOME</span>
             <span style={{ color: "#F4B942" }}>›</span>
-            <span style={{ color: "rgba(255,255,255,0.7)" }}>WHY NORMADIC</span>
+            <span style={{ color: "rgba(255,255,255,0.7)" }}>WHY NOMADIC</span>
           </motion.div>
 
           <div className="grid lg:grid-cols-12 gap-16 items-end">
@@ -158,7 +158,7 @@ export function WhyNomadicClient({ whyNomadicImages }: { whyNomadicImages?: stri
               >
                 <div className="h-px w-10" style={{ background: "linear-gradient(90deg, transparent, #F4B942)" }} />
                 <span style={{ fontSize: 10, letterSpacing: "0.4em", color: "#F4B942" }}>
-                  WE ARE NORMADIC VENTURES
+                  WE ARE NOMADIC VENTURES
                 </span>
               </motion.div>
 
@@ -334,7 +334,7 @@ export function WhyNomadicClient({ whyNomadicImages }: { whyNomadicImages?: stri
                     fontFamily: "'Clash Display', sans-serif",
                   }}
                 >
-                  NORMADIC VENTURES
+                  NOMADIC VENTURES
                 </span>
               </div>
 
@@ -352,7 +352,7 @@ export function WhyNomadicClient({ whyNomadicImages }: { whyNomadicImages?: stri
                 {/* logo icon */}
                 <motion.img
                   src={logoSrc}
-                  alt="Normadic Ventures"
+                  alt="Nomadic Ventures"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -378,7 +378,7 @@ export function WhyNomadicClient({ whyNomadicImages }: { whyNomadicImages?: stri
                       lineHeight: 1,
                     }}
                   >
-                    NORMADIC
+                    NOMADIC
                   </div>
                   <div
                     style={{
@@ -678,7 +678,7 @@ export function WhyNomadicClient({ whyNomadicImages }: { whyNomadicImages?: stri
         </div>
       </section>
 
-      {/* ── Why Normadic Ventures — 6 pillars ── */}
+      {/* ── Why Nomadic Ventures — 6 pillars ── */}
       <section
         className="border-t"
         style={{ borderColor: "rgba(255,255,255,0.06)" }}
@@ -690,7 +690,7 @@ export function WhyNomadicClient({ whyNomadicImages }: { whyNomadicImages?: stri
               <div className="flex items-center gap-3 mb-5">
                 <div className="h-px w-8" style={{ background: "#F4B942" }} />
                 <span style={{ fontSize: 10, letterSpacing: "0.28em", color: "#F4B942" }}>
-                  WHY NORMADIC VENTURES
+                  WHY NOMADIC VENTURES
                 </span>
               </div>
               <h2

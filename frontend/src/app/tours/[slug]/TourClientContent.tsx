@@ -825,7 +825,7 @@ export function TourClientContent({ tour }: { tour: any }) {
                   color: "rgba(255,255,255,0.7)",
                 }}
               >
-                Every Normadic itinerary is a draft. Add a private island finale,
+                Every Nomadic itinerary is a draft. Add a private island finale,
                 stretch the hill country, swap a city for a beach — your
                 designer will rewrite it in 24 hours.
               </p>
